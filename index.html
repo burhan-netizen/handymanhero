@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="img/badge.webp" type="image/webp">
+<title>Handyman Hero</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Veteran-owned handyman serving Payette, Fruitland and the Treasure Valley. Repairs, installs, safety upgrades, property care and remodels. Call (986) 777-0757.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Big+Shoulders+Stencil+Display:wght@700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: a "service record" for a veteran's business. Navy field, flag-red action, brass for honors. Stencil numerals, Public Sans (the U.S. government typeface) for reading. */
+:root{
+  --navy-900:#0A1426;
+  --navy-800:#0F1D36;
+  --navy-700:#16284A;
+  --navy-600:#22396A;
+  --red:#B8202F;
+  --red-bright:#D42A3B;
+  --brass:#C9A24A;
+  --brass-soft:#E3C77F;
+  --paper:#F2F3EF;
+  --paper-2:#E6E8E2;
+  --ink:#121A2A;
+  --ink-soft:#4A5468;
+  --line-dark:rgba(255,255,255,.12);
+  --line-light:rgba(18,26,42,.12);
+  --display:"Big Shoulders Display","Oswald","Arial Narrow",Impact,sans-serif;
+  --stencil:"Big Shoulders Stencil Display","Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Public Sans","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --wrap:1200px;
+  --gut-l:max(16px, env(safe-area-inset-left, 0px));
+  --gut-r:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--navy-900);color:var(--paper);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy-900)}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:.95;margin:0;text-wrap:balance;letter-spacing:.005em;text-transform:uppercase}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.eyebrow{font-family:var(--mono);font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:22px;height:2px;background:currentColor}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px;border-radius:4px}
+
+/* Demo banner */
+.demo{background:var(--brass);color:var(--navy-900);font-size:13.5px;font-weight:600;text-align:center;padding-block:8px}
+.demo .wrap{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+
+/* Header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(10,20,38,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-dark)}
+.hdr .wrap{display:flex;align-items:center;gap:20px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.brand img{width:54px;height:54px}
+.brand b{font-family:var(--display);font-size:24px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;line-height:1;display:block}
+.brand small{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--brass-soft);text-transform:uppercase;display:block;margin-top:3px}
+.nav{display:flex;gap:22px;margin-left:auto;font-size:15px;font-weight:600;white-space:nowrap}
+.nav a{text-decoration:none;opacity:.85}
+.nav a:hover{opacity:1;color:var(--brass-soft)}
+.hdr-call{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:6px;white-space:nowrap;transition:background .2s}
+.hdr-call:hover{background:var(--red-bright)}
+.hdr-call svg{width:18px;height:18px}
+.menu-btn{display:none;margin-left:auto;background:none;border:1px solid var(--line-dark);color:var(--paper);border-radius:6px;padding:9px 11px;cursor:pointer}
+@media (max-width:1020px){.nav{display:none}.nav.open{display:flex;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--navy-800);border-bottom:1px solid var(--line-dark);padding:8px var(--gut-r) 16px var(--gut-l)}.nav.open a{padding:12px 0;border-bottom:1px solid var(--line-dark)}.menu-btn{display:block}.hdr-call{margin-left:0}}
+@media (max-width:560px){.hdr-call span{display:none}.hdr-call{padding:11px 13px}.brand small{display:none}.brand b{font-size:21px}.brand img{width:46px;height:46px}}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:700;font-size:16.5px;text-decoration:none;padding:16px 26px;border-radius:7px;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .2s,border-color .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:active{transform:translateY(1px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 30px -10px rgba(184,32,47,.7)}
+.btn-red:hover{background:var(--red-bright)}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{border-color:var(--brass);color:var(--brass-soft)}
+.btn-navy{background:var(--navy-800);color:#fff}
+.btn-navy:hover{background:var(--navy-600)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(1200px 500px at 85% 10%, rgba(34,57,106,.9), transparent 60%),
+  linear-gradient(180deg,var(--navy-800),var(--navy-900))}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.55) 1px,transparent 1.4px);background-size:34px 34px;opacity:.07;mask-image:linear-gradient(90deg,#000 0,transparent 55%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:64px 0}
+.hero-copy{padding-bottom:64px;min-width:0}
+.hero .eyebrow{color:var(--brass-soft)}
+.hero h1{font-size:clamp(50px,7vw,96px);font-weight:900;margin-top:20px}
+.hero h1 em{font-style:normal;color:var(--red-bright);display:block}
+.hero-lede{font-size:19px;color:rgba(242,243,239,.82);max-width:34em;margin-top:24px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero-ctas .btn-red{font-size:18px}
+.phone-big{font-family:var(--display);font-size:22px;letter-spacing:.04em}
+.chips{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;font-size:14.5px;color:rgba(242,243,239,.85)}
+.chips span{display:inline-flex;align-items:center;gap:8px}
+.chips svg{width:17px;height:17px;color:var(--brass)}
+.hero-visual{position:relative;align-self:end;min-width:0}
+.arch{position:relative;width:min(100%,500px);margin-left:auto;aspect-ratio:1/1.06;border-radius:250px 250px 0 0;overflow:hidden;background:
+  repeating-linear-gradient(180deg,var(--red) 0 34px,#EDEDE6 34px 68px)}
+.arch::before{content:"";position:absolute;left:0;top:0;width:46%;height:46%;background:var(--navy-600);background-image:radial-gradient(#fff 1.6px,transparent 2px);background-size:22px 22px;background-position:6px 6px}
+.arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,20,38,.15),rgba(10,20,38,.0) 40%,rgba(10,20,38,.55))}
+.arch img{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100%;height:auto;max-width:none;z-index:1;filter:drop-shadow(0 18px 30px rgba(0,0,0,.45))}
+.tag{position:absolute;z-index:3;left:-6px;bottom:38px;width:230px;padding:16px 18px 16px 40px;border-radius:14px 34px 34px 14px;background:linear-gradient(135deg,#E9EBEE,#AEB4BD 55%,#D8DCE1);color:#1B2230;font-family:var(--mono);font-size:12px;font-weight:600;line-height:1.55;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 18px 40px -12px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.8);transform:rotate(-5deg)}
+.tag::before{content:"";position:absolute;left:14px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;background:var(--navy-900);box-shadow:inset 0 2px 3px rgba(0,0,0,.6)}
+.tag b{font-size:14px;display:block;letter-spacing:.08em}
+.seal{position:absolute;z-index:3;right:-8px;top:24px;width:118px;height:118px;border-radius:50%;background:var(--navy-900);border:2px solid var(--brass);display:grid;place-items:center;text-align:center;color:var(--brass-soft);font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:1;box-shadow:0 0 0 6px rgba(201,162,74,.18)}
+.seal span{font-size:13px;letter-spacing:.14em}
+.seal strong{font-size:34px;display:block;color:#fff;margin:3px 0}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;padding-top:44px}.hero-copy{padding-bottom:0}.arch{margin:0 auto;width:min(100%,420px)}.tag{left:0}.seal{right:0}}
+@media (max-width:600px){.record-photo .stamp{bottom:auto;right:auto;top:16px;left:14px;font-size:17px;padding:4px 10px}}
+@media (max-width:420px){.tag{width:186px;font-size:10.5px;bottom:10px;padding:12px 14px 12px 34px}.tag b{font-size:12.5px}.seal{width:96px;height:96px}.seal strong{font-size:27px}}
+.hero-load>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.hero-load>*:nth-child(2){animation-delay:.08s}.hero-load>*:nth-child(3){animation-delay:.16s}.hero-load>*:nth-child(4){animation-delay:.24s}.hero-load>*:nth-child(5){animation-delay:.32s}
+@keyframes rise{from{transform:translateY(18px);opacity:.001}to{transform:none;opacity:1}}
+
+/* Ticker */
+.ticker{background:var(--red);color:#fff;overflow:hidden;border-block:3px solid var(--navy-900)}
+.ticker-track{display:flex;width:max-content;animation:tick 42s linear infinite}
+.ticker-track span{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.06em;text-transform:uppercase;padding:13px 0;display:inline-flex;align-items:center;white-space:nowrap}
+.ticker-track span::after{content:"★";color:var(--brass-soft);font-size:15px;margin:0 26px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* Section base */
+.sec{padding-block:96px}
+.sec-light{background:var(--paper);color:var(--ink)}
+.sec-light2{background:var(--paper-2);color:var(--ink)}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:28px 60px;align-items:end;margin-bottom:52px}
+.sec-head h2{font-size:clamp(40px,5.4vw,70px);font-weight:900}
+.sec-head p{font-size:18px;color:var(--ink-soft);max-width:36em}
+.sec-light .eyebrow,.sec-light2 .eyebrow{color:var(--red)}
+.sec-dark .eyebrow{color:var(--brass-soft)}
+.sec-dark .sec-head p{color:rgba(242,243,239,.75)}
+@media (max-width:820px){.sec{padding-block:68px}.sec-head{grid-template-columns:1fr;margin-bottom:36px}}
+
+/* Problem / promise */
+.pp{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line-light);border-radius:14px;overflow:hidden;background:#fff}
+.pp>div{padding:40px;min-width:0}
+.pp-problem{background:#fff}
+.pp-promise{background:var(--navy-800);color:var(--paper)}
+.pp h3{font-size:30px;font-weight:800;margin-bottom:22px}
+.pp ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.pp li{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start}
+.pp li svg{width:22px;height:22px;margin-top:3px}
+.pp-problem li svg{color:#9AA2B1}
+.pp-problem li{color:var(--ink-soft)}
+.pp-promise li svg{color:var(--brass)}
+.pp-label{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px;display:block}
+.pp-problem .pp-label{color:#8A93A3}
+.pp-promise .pp-label{color:var(--brass-soft)}
+.pp-out{grid-column:1/-1;background:var(--red);color:#fff;padding:22px 40px!important;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between}
+.pp-out p{font-family:var(--display);font-size:clamp(22px,2.6vw,30px);font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
+.pp-out a{color:#fff;font-weight:700;white-space:nowrap}
+@media (max-width:820px){.pp{grid-template-columns:1fr}.pp>div{padding:28px 22px}.pp-out{padding:22px!important}}
+
+/* Services */
+.svc-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.svc{grid-column:span 2;background:#fff;border:1px solid var(--line-light);border-radius:12px;padding:30px 28px;display:flex;flex-direction:column;gap:16px;min-width:0;transition:transform .25s,box-shadow .25s,border-color .25s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(15,29,54,.45);border-color:rgba(184,32,47,.35)}
+.svc.wide{grid-column:span 3}
+.svc-ico{width:54px;height:54px;border-radius:10px;background:var(--navy-800);color:var(--brass-soft);display:grid;place-items:center}
+.svc-ico svg{width:28px;height:28px}
+.svc h3{font-size:28px;font-weight:800;color:var(--ink)}
+.svc p{color:var(--ink-soft);font-size:16px}
+.svc ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:7px}
+.svc li{font-size:13.5px;font-weight:600;color:var(--navy-700);background:var(--paper);border:1px solid var(--line-light);border-radius:999px;padding:5px 11px}
+.svc.feature{background:var(--navy-800);border-color:var(--navy-800);color:var(--paper)}
+.svc.feature h3{color:#fff}
+.svc.feature p{color:rgba(242,243,239,.78)}
+.svc.feature .svc-ico{background:var(--red);color:#fff}
+.svc.feature li{background:rgba(255,255,255,.06);border-color:var(--line-dark);color:var(--paper)}
+.offer{margin-top:auto;display:flex;gap:14px;align-items:center;background:rgba(201,162,74,.12);border:1px dashed var(--brass);border-radius:10px;padding:14px 16px}
+.offer strong{font-family:var(--stencil);font-size:30px;color:var(--brass-soft);line-height:1;white-space:nowrap}
+.offer span{font-size:14px;color:rgba(242,243,239,.85);line-height:1.4}
+.svc-note{margin-top:26px;font-size:15px;color:var(--ink-soft);display:flex;gap:10px;align-items:center}
+.svc-note svg{width:18px;height:18px;color:var(--red);flex:none}
+@media (max-width:980px){.svc,.svc.wide{grid-column:span 3}}
+@media (max-width:640px){.svc-grid{grid-template-columns:1fr}.svc,.svc.wide{grid-column:auto}}
+
+/* Service record (veteran) */
+.record{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.record-photo{position:relative;border-radius:16px;overflow:hidden;background:var(--navy-700);aspect-ratio:4/5;max-width:100%}
+.record-photo::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 12px,transparent 12px 24px)}
+.record-photo img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center top}
+.record-photo .stamp{position:absolute;bottom:118px;right:20px;z-index:2;border:3px solid var(--red-bright);color:var(--red-bright);font-family:var(--stencil);font-size:26px;letter-spacing:.06em;padding:6px 14px;transform:rotate(-8deg);background:rgba(10,20,38,.55);text-transform:uppercase}
+.record-photo figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:46px 24px 22px;background:linear-gradient(180deg,transparent,rgba(10,20,38,.92));font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--brass-soft)}
+.record-photo figcaption b{display:block;font-family:var(--display);font-size:30px;letter-spacing:.02em;color:#fff;margin-bottom:4px}
+.record h2{font-size:clamp(40px,5vw,66px);font-weight:900;margin-top:16px}
+.record-quote{font-size:21px;line-height:1.5;color:rgba(242,243,239,.92);margin-top:24px;padding-left:20px;border-left:3px solid var(--red)}
+.record-body{color:rgba(242,243,239,.75);margin-top:20px;max-width:38em}
+.file{margin-top:36px;border:1px solid var(--line-dark);border-radius:12px;overflow:hidden}
+.file-row{display:grid;grid-template-columns:150px 1fr;border-bottom:1px solid var(--line-dark)}
+.file-row:last-child{border-bottom:0}
+.file-row dt{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-soft);padding:15px 18px;background:rgba(255,255,255,.03)}
+.file-row dd{margin:0;padding:15px 18px;font-weight:500}
+.file{margin-bottom:0}
+dl{margin:0}
+.standards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
+.standard{border-top:2px solid var(--brass);padding-top:14px}
+.standard b{font-family:var(--display);font-size:22px;text-transform:uppercase;letter-spacing:.03em;display:block}
+.standard span{font-size:14px;color:rgba(242,243,239,.7);line-height:1.45;display:block;margin-top:4px}
+@media (max-width:900px){.record{grid-template-columns:1fr;gap:40px}.record-photo{max-width:460px}.standards{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.file-row{grid-template-columns:1fr}.file-row dt{padding-bottom:4px}.file-row dd{padding-top:6px}}
+
+/* Honey-do builder */
+.hd{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+.hd-tasks{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.task{position:relative}
+.task input{position:absolute;opacity:0;pointer-events:none}
+.task label{display:flex;align-items:center;gap:12px;background:#fff;border:1.5px solid var(--line-light);border-radius:10px;padding:14px 14px;cursor:pointer;font-weight:600;font-size:15.5px;color:var(--ink);transition:border-color .2s,background .2s,transform .15s;user-select:none}
+.task label:hover{border-color:var(--navy-600)}
+.task .box{width:22px;height:22px;border-radius:5px;border:2px solid #A9B0BD;flex:none;display:grid;place-items:center;transition:all .2s}
+.task .box svg{width:14px;height:14px;color:#fff;opacity:0;transform:scale(.5);transition:all .2s}
+.task input:checked+label{border-color:var(--navy-800);background:#EEF1F7}
+.task input:checked+label .box{background:var(--red);border-color:var(--red)}
+.task input:checked+label .box svg{opacity:1;transform:none}
+.task input:focus-visible+label{outline:3px solid var(--brass);outline-offset:2px}
+.hd-card{position:sticky;top:calc(env(safe-area-inset-top,0px) + 96px);background:var(--navy-800);color:var(--paper);border-radius:14px;padding:28px;min-width:0}
+.hd-card h3{font-size:30px;font-weight:800}
+.hd-count{font-family:var(--stencil);font-size:72px;line-height:1;color:var(--brass-soft);margin-top:14px;font-variant-numeric:tabular-nums}
+.hd-count small{font-family:var(--body);font-size:15px;font-weight:600;color:rgba(242,243,239,.7);margin-left:8px;letter-spacing:0}
+.hd-list{list-style:none;margin:16px 0 22px;padding:0;display:grid;gap:6px;font-size:14.5px;color:rgba(242,243,239,.85);max-height:180px;overflow:auto}
+.hd-list li::before{content:"★ ";color:var(--red-bright)}
+.hd-empty{color:rgba(242,243,239,.55);font-style:italic}
+.hd-card .btn{width:100%}
+.hd-tip{font-size:13.5px;color:rgba(242,243,239,.6);margin-top:14px;line-height:1.5}
+@media (max-width:900px){.hd{grid-template-columns:1fr}.hd-card{position:static}}
+
+/* Reviews */
+.rev-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:18px}
+.rev{background:var(--navy-800);border:1px solid var(--line-dark);border-radius:14px;padding:30px;display:flex;flex-direction:column;gap:20px;min-width:0}
+.rev.lead{background:var(--paper);color:var(--ink);border-color:transparent}
+.stars{display:flex;gap:3px;color:var(--brass)}
+.stars svg{width:18px;height:18px}
+.rev blockquote{margin:0;font-size:18.5px;line-height:1.55}
+.rev.lead blockquote{font-family:var(--display);font-size:clamp(28px,3vw,38px);font-weight:800;line-height:1.08;text-transform:uppercase;letter-spacing:.01em}
+.rev-who{margin-top:auto;display:flex;align-items:center;gap:12px;font-size:14.5px}
+.av{width:42px;height:42px;border-radius:50%;background:var(--navy-600);color:#fff;display:grid;place-items:center;font-weight:700;flex:none}
+.rev.lead .av{background:var(--red)}
+.rev-who b{display:block}
+.rev-who span{color:rgba(242,243,239,.6);font-size:13.5px}
+.rev.lead .rev-who span{color:var(--ink-soft)}
+.rev-src{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(242,243,239,.5);margin-top:22px;text-align:center}
+@media (max-width:980px){.rev-grid{grid-template-columns:1fr 1fr}.rev.lead{grid-column:1/-1}}
+@media (max-width:640px){.rev-grid{grid-template-columns:1fr}}
+
+/* Gallery */
+.gal-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.gal-tabs button{font:600 14.5px var(--body);border:1.5px solid var(--line-light);background:#fff;color:var(--ink);padding:9px 16px;border-radius:999px;cursor:pointer}
+.gal-tabs button[aria-pressed="true"]{background:var(--navy-800);border-color:var(--navy-800);color:#fff}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px}
+.ph{position:relative;border-radius:12px;overflow:hidden;background:
+  linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,0)),
+  repeating-linear-gradient(45deg,var(--navy-700) 0 14px,var(--navy-800) 14px 28px);color:var(--paper);display:flex;flex-direction:column;justify-content:flex-end;padding:18px;min-width:0}
+.ph.tall{grid-row:span 2}
+.ph.wide{grid-column:span 2}
+.ph .ph-ico{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:56px;height:56px;border-radius:50%;border:2px dashed rgba(227,199,127,.6);display:grid;place-items:center;color:var(--brass-soft)}
+.ph .ph-ico svg{width:24px;height:24px}
+.ph b{font-family:var(--display);font-size:22px;text-transform:uppercase;letter-spacing:.02em;position:relative}
+.ph span{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-soft);position:relative}
+.ph.video{background:linear-gradient(180deg,rgba(10,20,38,.1),rgba(10,20,38,.85)),repeating-linear-gradient(-45deg,#1B2F57 0 14px,var(--navy-800) 14px 28px)}
+.ph.video .ph-ico{background:var(--red);border:0;color:#fff;width:66px;height:66px;box-shadow:0 0 0 10px rgba(184,32,47,.25)}
+.ph.video .ph-ico svg{width:26px;height:26px;margin-left:4px}
+.ph[hidden]{display:none!important}
+/* before/after */
+.ba{position:relative;grid-column:span 2;grid-row:span 2;border-radius:12px;overflow:hidden;user-select:none;touch-action:pan-y;min-width:0}
+.ba-side{position:absolute;inset:0;display:flex;align-items:flex-end;padding:18px}
+.ba-before{background:repeating-linear-gradient(45deg,#3A4150 0 14px,#2D3442 14px 28px)}
+.ba-after{background:repeating-linear-gradient(45deg,var(--navy-600) 0 14px,var(--navy-700) 14px 28px);clip-path:inset(0 0 0 50%)}
+.ba-after{justify-content:flex-end}
+.ba-side span{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:rgba(10,20,38,.8);color:#fff;padding:6px 10px;border-radius:5px}
+.ba-after span{background:var(--red)}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%);pointer-events:none}
+.ba-handle::after{content:"⟷";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;color:var(--navy-800);display:grid;place-items:center;font-size:20px;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba-title{position:absolute;top:16px;left:16px;font-family:var(--display);font-size:24px;text-transform:uppercase;color:#fff;letter-spacing:.02em;pointer-events:none}
+.gal-note{margin-top:20px;font-size:14.5px;color:var(--ink-soft);display:flex;gap:10px;align-items:center}
+.gal-note svg{width:18px;height:18px;color:var(--red);flex:none}
+@media (max-width:900px){.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}}
+@media (max-width:520px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px;gap:10px}.ph.wide{grid-column:span 2}.ph b{font-size:18px}.ba{grid-column:span 2}}
+
+/* Process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
+.step{padding:0 28px 0 0;position:relative;min-width:0}
+.step-n{font-family:var(--stencil);font-size:76px;line-height:1;color:var(--red)}
+.step::after{content:"";position:absolute;top:38px;left:90px;right:20px;height:2px;background:repeating-linear-gradient(90deg,var(--navy-600) 0 8px,transparent 8px 14px);opacity:.4}
+.step:last-child::after{display:none}
+.step h3{font-size:26px;font-weight:800;color:var(--ink);margin-top:14px}
+.step p{color:var(--ink-soft);margin-top:10px;font-size:16px}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr;gap:40px 24px}.step::after{display:none}}
+@media (max-width:480px){.steps{grid-template-columns:1fr}}
+
+/* Area */
+.area{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.area h2{font-size:clamp(40px,5vw,64px);font-weight:900;margin-top:16px}
+.area p{color:var(--ink-soft);margin-top:18px;font-size:17.5px;max-width:34em}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.towns span{font-weight:700;font-size:15px;padding:9px 15px;border-radius:7px;background:#fff;border:1.5px solid var(--line-light);color:var(--ink);display:inline-flex;gap:8px;align-items:center}
+.towns span.home{background:var(--navy-800);color:#fff;border-color:var(--navy-800)}
+.towns span.home::before{content:"★";color:var(--brass)}
+.map{position:relative;aspect-ratio:1/1;max-width:100%;border-radius:16px;background:var(--navy-800);overflow:hidden}
+.map svg{width:100%;height:100%;display:block}
+.hours{margin-top:26px;display:grid;grid-template-columns:auto 1fr;gap:6px 22px;font-size:15.5px;max-width:330px}
+.hours dt{font-weight:700;color:var(--ink)}
+.hours dd{margin:0;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+@media (max-width:900px){.area{grid-template-columns:1fr;gap:36px}.map{max-width:480px}}
+
+/* FAQ */
+.faq{max-width:860px}
+.faq details{border-bottom:1px solid var(--line-light)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:22px 0;font-weight:700;font-size:19px;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--display);font-size:32px;line-height:.7;color:var(--red);transition:transform .2s;flex:none}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--ink-soft);padding:0 0 24px;max-width:44em}
+
+/* Estimate */
+.est{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.est h2{font-size:clamp(44px,5.6vw,76px);font-weight:900;margin-top:16px}
+.est-side p{color:rgba(242,243,239,.78);margin-top:20px;font-size:18px;max-width:30em}
+.call-card{margin-top:34px;display:flex;flex-direction:column;gap:6px;padding:24px;border:1px solid var(--line-dark);border-radius:14px;background:rgba(255,255,255,.03)}
+.call-card small{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-soft)}
+.call-card a.num{font-family:var(--display);font-size:clamp(38px,4.6vw,52px);font-weight:900;text-decoration:none;letter-spacing:.02em;line-height:1.05}
+.call-card a.num:hover{color:var(--brass-soft)}
+.call-card a.mail{color:rgba(242,243,239,.8);font-size:15.5px;word-break:break-all}
+.form{background:var(--paper);color:var(--ink);border-radius:16px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:16px;min-width:0;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.form .full{grid-column:1/-1}
+.form label{display:block;font-size:13.5px;font-weight:700;margin-bottom:6px;color:var(--ink)}
+.form input,.form select,.form textarea{width:100%;font:500 16px var(--body);color:var(--ink);background:#fff;border:1.5px solid #C8CDD6;border-radius:8px;padding:13px 14px;transition:border-color .2s}
+.form textarea{min-height:120px;resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:var(--navy-600);box-shadow:0 0 0 3px rgba(34,57,106,.15)}
+.form-head{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.form-head b{font-family:var(--display);font-size:28px;text-transform:uppercase}
+.form-head span{font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.form .btn{width:100%;font-size:18px}
+.form-fine{font-size:13px;color:var(--ink-soft);text-align:center}
+.form-ok{grid-column:1/-1;text-align:center;padding:30px 10px}
+.form-ok .seal-ok{width:76px;height:76px;margin:0 auto 18px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center}
+.form-ok .seal-ok svg{width:36px;height:36px}
+.form-ok b{font-family:var(--display);font-size:34px;text-transform:uppercase;display:block}
+.form-ok p{color:var(--ink-soft);margin-top:10px}
+@media (max-width:900px){.est{grid-template-columns:1fr;gap:40px}}
+@media (max-width:560px){.form{grid-template-columns:1fr;padding:22px}}
+
+/* Footer */
+.ftr{background:#070F1E;padding-block:64px 30px;border-top:4px solid var(--red)}
+.ftr-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+.ftr-brand img{width:110px;height:110px}
+.ftr-brand p{color:rgba(242,243,239,.65);font-size:15px;margin-top:16px;max-width:28em}
+.ftr h4{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-soft);margin:0 0 16px}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:15px;color:rgba(242,243,239,.8)}
+.ftr ul a{text-decoration:none}
+.ftr ul a:hover{color:var(--brass-soft)}
+.ftr-base{margin-top:48px;padding-top:24px;border-top:1px solid var(--line-dark);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13.5px;color:rgba(242,243,239,.55)}
+.ftr-base a{color:var(--brass-soft);font-weight:600}
+@media (max-width:900px){.ftr-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.ftr-grid{grid-template-columns:1fr}}
+
+/* Mobile call bar */
+.mbar{display:none}
+@media (max-width:760px){
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut-l);background:rgba(7,15,30,.96);border-top:1px solid var(--line-dark);backdrop-filter:blur(8px)}
+  .mbar .btn{padding:14px 10px;font-size:15.5px}
+  body{padding-bottom:76px}
+}
+
+/* ===== v2: tighter sections, cleaner header, aligned hero ===== */
+.sec{padding-block:72px}
+.sec-head{margin-bottom:36px;gap:14px 60px}
+.sec-head h2{font-size:clamp(34px,4vw,54px)}
+.sec-head p{font-size:17px}
+@media (max-width:820px){.sec{padding-block:56px}.sec-head{margin-bottom:26px}}
+
+/* header */
+.hdr .wrap{padding-block:9px;gap:24px}
+.brand{gap:12px}
+.brand img{width:50px;height:50px}
+.brand b{font-size:24px;letter-spacing:.03em}
+.brand small{font-size:10.5px;letter-spacing:.1em;white-space:nowrap;margin-top:5px;font-weight:500}
+.nav{gap:2px;font-size:15px;font-weight:600}
+.nav a{padding:8px 13px;border-radius:6px;opacity:.82}
+.nav a:hover{background:rgba(255,255,255,.07);opacity:1;color:#fff}
+.hdr-call{padding:11px 18px;font-size:15.5px}
+
+/* hero */
+.hero .wrap{grid-template-columns:1.15fr .85fr;align-items:center;gap:56px;padding-block:44px}
+.hero-copy{padding-bottom:0}
+.hero h1{font-size:clamp(44px,5.1vw,74px);margin-top:16px;line-height:.92}
+.hero-lede{font-size:18px;margin-top:18px;max-width:31em}
+.hero-ctas{margin-top:26px}
+.chips{margin-top:22px}
+.hero-visual{align-self:center;justify-self:end;width:min(100%,410px)}
+.arch{width:100%;margin:0;border-radius:205px 205px 18px 18px;box-shadow:0 0 0 6px rgba(201,162,74,.22),0 30px 60px -24px rgba(0,0,0,.7)}
+.tag{left:-34px;bottom:30px}
+.seal{right:-22px;top:18px}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:36px;padding-block:36px 44px}.hero-visual{justify-self:center;width:min(100%,340px)}.tag{left:-10px}.seal{right:-8px}}
+
+/* problem/promise */
+.pp>div{padding:30px 34px}
+.pp h3{font-size:26px;margin-bottom:18px}
+.pp ul{gap:11px}
+.pp-out{padding:18px 34px!important}
+
+/* services v2 */
+.svc2{display:grid;grid-template-columns:1.65fr 1fr;gap:18px;align-items:stretch}
+.svc-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.svc-m{background:#fff;border:1px solid var(--line-light);border-radius:14px;padding:22px 22px 18px;display:flex;flex-direction:column;gap:12px;min-width:0;transition:transform .25s,box-shadow .25s,border-color .25s}
+.svc-m:hover{transform:translateY(-3px);box-shadow:0 22px 40px -26px rgba(15,29,54,.5);border-color:rgba(184,32,47,.35)}
+.svc-m-top{display:flex;gap:14px;align-items:center}
+.svc-m .svc-ico{width:46px;height:46px;flex:none;border-radius:10px;background:var(--navy-800);color:var(--brass-soft);display:grid;place-items:center}
+.svc-m .svc-ico svg{width:23px;height:23px}
+.svc-m h3{font-size:23px;font-weight:800;color:var(--ink);line-height:1}
+.svc-m h3 small{display:block;font-family:var(--body);font-size:13.5px;font-weight:500;color:var(--ink-soft);text-transform:none;letter-spacing:0;margin-top:5px}
+.svc-m ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.svc-m li{font-size:13px;font-weight:600;color:var(--navy-700);background:var(--paper);border:1px solid var(--line-light);border-radius:999px;padding:4px 10px}
+.svc-link{margin-top:auto;padding-top:4px;font-size:14px;font-weight:700;color:var(--red);text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.svc-link:hover{text-decoration:underline}
+.svc-f{position:relative;overflow:hidden;background:var(--navy-800);color:var(--paper);border-radius:14px;padding:30px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.svc-f::after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;background:repeating-linear-gradient(180deg,rgba(184,32,47,.22) 0 14px,transparent 14px 28px);pointer-events:none}
+.svc-f .svc-ico{width:52px;height:52px;border-radius:10px;background:var(--red);color:#fff;display:grid;place-items:center}
+.svc-f .svc-ico svg{width:27px;height:27px}
+.svc-f .kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-soft)}
+.svc-f h3{font-size:34px;font-weight:900;color:#fff}
+.svc-f p{color:rgba(242,243,239,.78);font-size:15.5px}
+.svc-f ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font-size:14.5px;font-weight:600}
+.svc-f li{display:flex;gap:8px;align-items:center}
+.svc-f li::before{content:"★";color:var(--brass);font-size:11px}
+.svc-f .offer{margin-top:auto;position:relative;z-index:1}
+.svc-f .btn{position:relative;z-index:1}
+@media (max-width:1000px){.svc2{grid-template-columns:1fr}}
+@media (max-width:600px){.svc-mini-grid{grid-template-columns:1fr}.svc-f ul{grid-template-columns:1fr 1fr}}
+
+/* record compact */
+.record{grid-template-columns:380px 1fr;gap:56px;align-items:center}
+.record h2{font-size:clamp(34px,4vw,52px);margin-top:14px}
+.record-quote{font-size:19px;margin-top:18px}
+.record-body{margin-top:14px;font-size:16px}
+.file{display:grid;grid-template-columns:1fr 1fr;margin-top:22px}
+.file-row{display:block;border-bottom:1px solid var(--line-dark)}
+.file-row:nth-child(odd){border-right:1px solid var(--line-dark)}
+.file-row:last-child{grid-column:1/-1;border-right:0;border-bottom:0}
+.file-row dt{background:none;padding:12px 16px 2px;font-size:10.5px}
+.file-row dd{padding:0 16px 12px;font-size:15.5px}
+.standards{margin-top:22px}
+@media (max-width:900px){.record{grid-template-columns:1fr;gap:32px}.record-photo{width:100%;max-width:380px}}
+@media (max-width:480px){.file{grid-template-columns:1fr}.file-row:nth-child(odd){border-right:0}}
+
+/* honey-do v2 */
+.hd-panel{background:#fff;border:1px solid var(--line-light);border-radius:14px;padding:22px;min-width:0}
+.hd-panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.hd-panel-head b{font-family:var(--display);font-size:22px;text-transform:uppercase;letter-spacing:.02em;color:var(--ink)}
+.hd-panel-head span{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.hd-tasks{grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px}
+.task label{padding:10px 12px;font-size:14.5px;border-radius:9px;background:var(--paper)}
+.task input:checked+label{background:#E8EDF7}
+.task.custom label{border-style:dashed;border-color:var(--red)}
+.task.custom label em{font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--red);margin-left:auto}
+.hd-custom{margin-top:16px;padding:16px;border-radius:12px;background:#FBF6EA;border:1.5px dashed var(--brass)}
+.hd-custom label{display:block;font-weight:800;font-size:16px;color:var(--ink)}
+.hd-custom small{display:block;color:var(--ink-soft);font-size:13.5px;margin:2px 0 10px}
+.hd-custom-row{display:flex;gap:8px}
+.hd-custom-row input{flex:1;min-width:0;font:500 15.5px var(--body);border:1.5px solid #C8CDD6;border-radius:8px;padding:11px 13px;background:#fff;color:var(--ink)}
+.hd-custom-row input:focus{outline:none;border-color:var(--navy-600);box-shadow:0 0 0 3px rgba(34,57,106,.15)}
+.hd-custom-row .btn{padding:11px 16px;font-size:15px;white-space:nowrap}
+.hd-card{top:calc(env(safe-area-inset-top,0px) + 88px)}
+.hd-count{font-size:60px;margin-top:10px}
+.bundle{margin:14px 0 4px}
+.bundle-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+.bundle-bar i{height:7px;border-radius:4px;background:rgba(255,255,255,.12);transition:background .3s}
+.bundle-bar i.on{background:var(--brass)}
+.bundle p{font-size:13.5px;color:rgba(242,243,239,.75);margin-top:8px}
+.bundle p b{color:var(--brass-soft)}
+@media (max-width:460px){.hd-custom-row{flex-direction:column}}
+
+/* reviews */
+.rev{padding:26px}
+.rev.lead blockquote{font-size:clamp(24px,2.5vw,32px)}
+.rev blockquote{font-size:17px}
+
+/* gallery */
+.gal{grid-auto-rows:160px}
+@media (max-width:900px){.gal{grid-auto-rows:150px}}
+
+/* steps v2 */
+.steps2{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+.steps2::before{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,var(--brass) 0 10px,transparent 10px 18px);opacity:.55}
+.steps2 li{position:relative;margin-top:34px;background:rgba(255,255,255,.04);border:1px solid var(--line-dark);border-radius:14px;padding:0 22px 24px;text-align:center;min-width:0;transition:background .25s,border-color .25s}
+.steps2 li:hover{background:rgba(255,255,255,.07);border-color:rgba(201,162,74,.45)}
+.s-badge{width:68px;height:68px;margin:-34px auto 16px;border-radius:50%;background:var(--red);border:4px solid var(--navy-800);box-shadow:0 0 0 2px var(--brass);display:grid;place-items:center;font-family:var(--stencil);font-size:30px;line-height:1;color:#fff}
+.steps2 h3{font-size:24px;font-weight:800;color:#fff}
+.steps2 p{color:rgba(242,243,239,.74);font-size:15px;margin-top:8px}
+.s-time{display:inline-flex;gap:6px;align-items:center;margin-top:14px;font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brass-soft);border:1px solid rgba(201,162,74,.4);border-radius:999px;padding:5px 11px}
+.steps-cta{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:34px}
+@media (max-width:900px){.steps2{grid-template-columns:1fr 1fr;row-gap:24px}.steps2::before{display:none}}
+@media (max-width:520px){.steps2{grid-template-columns:1fr}}
+
+/* area */
+.area{gap:56px}
+.map{width:100%;max-width:420px;justify-self:end}
+@media (max-width:900px){.map{justify-self:start}}
+
+/* faq v2 */
+.faq-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.faq-intro h2{font-size:clamp(34px,4vw,54px);font-weight:900;margin-top:14px}
+.faq-intro p{color:var(--ink-soft);margin-top:14px;font-size:17px}
+.faq-intro .btn{margin-top:22px}
+.faq{max-width:none}
+.faq summary{padding:17px 0;font-size:17.5px}
+.faq details p{padding-bottom:18px;font-size:16px}
+@media (max-width:900px){.faq-wrap{grid-template-columns:1fr;gap:24px}}
+
+/* estimate */
+.est h2{font-size:clamp(38px,4.6vw,62px)}
+.form{padding:28px;gap:14px}
+.form textarea{min-height:92px}
+.form input,.form select,.form textarea{padding:11px 13px}
+
+.sec-head{grid-template-columns:1.25fr .75fr}
+.record-photo .stamp{bottom:auto;right:16px;top:18px;left:auto;font-size:19px;padding:4px 11px;transform:rotate(6deg)}
+.area h2{font-size:clamp(34px,4vw,54px)}
+.map{max-width:380px}
+@media (max-width:820px){.sec-head{grid-template-columns:1fr}}
+@media (max-width:600px){.record-photo .stamp{top:14px;right:12px;left:auto;font-size:16px}}
+.brand b{white-space:nowrap}
+@media (max-width:560px){.brand b{font-size:21px}.hero-ctas .btn{width:100%}.hero .eyebrow{font-size:11px;letter-spacing:.12em}}
+/* ===== protection ===== */
+body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+input,textarea,select{-webkit-user-select:text;user-select:text}
+img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
+.wm{position:fixed;inset:0;z-index:45;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='220'%3E%3Ctext x='20' y='130' transform='rotate(-24 180 110)' font-family='Arial,sans-serif' font-size='17' font-weight='700' letter-spacing='3' fill='%23808080'%3EMAGO LABS CONCEPT %C2%B7 NOT FOR USE%3C/text%3E%3C/svg%3E")}
+@media print{body{display:none!important}}
+</style>
+
+</head>
+<body>
+<div class="demo"><div class="wrap">Concept website prepared for Handyman Hero by Mago Labs. Not the live site.</div></div>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Handyman Hero home">
+      <img src="img/badge.webp" alt="Handyman Hero badge logo" width="54" height="54">
+      <span><b>Handyman Hero</b><small>Veteran Owned · Payette County, ID</small></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#services">Services</a>
+      <a href="#veteran">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#estimate">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="hdr-call" href="tel:+19867770757" aria-label="Call Handyman Hero at (986) 777-0757">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>
+      <span>(986) 777-0757</span>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy hero-load">
+      <span class="eyebrow">U.S. Army Veteran · Owner Operated</span>
+      <h1>Served our country. <em>Now serving your home.</em></h1>
+      <p class="hero-lede">Honest, on-time handyman work for Payette, Fruitland and the Treasure Valley. From a sticky door to a full bathroom refresh, Christopher shows up when he says he will, quotes it straight and does it right the first time.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-red" href="tel:+19867770757">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>
+          Call <span class="phone-big">(986) 777-0757</span>
+        </a>
+        <a class="btn btn-ghost" href="#estimate">Get a Free Estimate</a>
+      </div>
+      <div class="chips">
+        <span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg>Veteran owned</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Payette County local, 10+ years</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Free, no-pressure estimates</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="arch">
+        <img src="img/christopher.webp" alt="Christopher Coleman, owner of Handyman Hero" width="820" height="820">
+      </div>
+      <div class="seal"><div><span>Est.</span><strong>2024</strong><span>Idaho</span></div></div>
+      <div class="tag" aria-label="Christopher Coleman, U.S. Army veteran, owner of Handyman Hero">
+        <b>Coleman, C.</b>
+        U.S. Army Veteran<br>
+        Owner · Handyman Hero<br>
+        Fruitland, ID
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Repairs</span><span>TV Mounting</span><span>Ceiling Fans</span><span>Gutter Cleaning</span><span>Power Washing</span><span>Baby Proofing</span><span>Decks &amp; Porches</span><span>LVP Flooring</span><span>Bathroom Remodels</span><span>Smart Home Setup</span><span>Exterior Painting</span><span>House Sitting</span>
+    <span>Repairs</span><span>TV Mounting</span><span>Ceiling Fans</span><span>Gutter Cleaning</span><span>Power Washing</span><span>Baby Proofing</span><span>Decks &amp; Porches</span><span>LVP Flooring</span><span>Bathroom Remodels</span><span>Smart Home Setup</span><span>Exterior Painting</span><span>House Sitting</span>
+  </div>
+</div>
+
+<!-- PROBLEM / PROMISE -->
+<section class="sec sec-light">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Why Handyman Hero exists</span>
+        <h2 style="margin-top:16px">Good help shouldn't be this hard to find.</h2>
+      </div>
+      <p>After more than a decade in Payette County, Christopher kept hearing the same thing from neighbors: nobody calls back, nobody shows up, and small jobs get ignored. So he started a business that does the opposite.</p>
+    </div>
+    <div class="pp">
+      <div class="pp-problem">
+        <span class="pp-label">What you're used to</span>
+        <h3>The usual runaround</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Calls and texts that never get returned</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>"Too small" for the big outfits, so the list keeps growing</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Vague quotes and surprise charges at the end</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>Pressure to buy work you don't really need</li>
+        </ul>
+      </div>
+      <div class="pp-promise">
+        <span class="pp-label">The Hero standard</span>
+        <h3>Mission first. Your home, done right.</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>On time, every time. Military punctual.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>No job too small. Your whole list, one visit.</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Clear, fair pricing before any work starts</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Straight advice, even when it means less work for him</li>
+        </ul>
+      </div>
+      <div class="pp-out">
+        <p>The result: a finished list and a home you feel good about.</p>
+        <a href="#estimate">Start your list →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec sec-light2" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Services</span>
+        <h2 style="margin-top:16px">One call covers the whole house.</h2>
+      </div>
+      <p>Quick fixes, weekend projects and full remodels. Whatever is on your list, Handyman Hero can handle it or will tell you straight who can.</p>
+    </div>
+    <div class="svc2">
+      <div class="svc-mini-grid">
+        <article class="svc-m">
+          <div class="svc-m-top"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h3>Repairs &amp; Maintenance<small>The small stuff, fixed properly.</small></h3></div>
+          <ul><li>General repairs</li><li>Caulking</li><li>Weather stripping</li><li>Dryer vents</li><li>Gutters</li><li>Power washing</li></ul>
+          <a class="svc-link" href="#estimate" data-svc="Repairs &amp; maintenance">Quote this <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="svc-m">
+          <div class="svc-m-top"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Installs &amp; Assembly<small>Level, wired right, cleaned up.</small></h3></div>
+          <ul><li>TV mounting</li><li>Ceiling fans</li><li>Light fixtures</li><li>Shelving</li><li>Furniture</li><li>Plumbing &amp; electrical swaps</li></ul>
+          <a class="svc-link" href="#estimate" data-svc="Installs &amp; assembly">Quote this <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="svc-m">
+          <div class="svc-m-top"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Safety &amp; Smart Home<small>Safer, smarter, more organized.</small></h3></div>
+          <ul><li>Baby proofing</li><li>Safety upgrades</li><li>Smart devices</li><li>Tech help</li><li>Garage &amp; closets</li></ul>
+          <a class="svc-link" href="#estimate" data-svc="Safety &amp; smart home">Quote this <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="svc-m">
+          <div class="svc-m-top"><div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><circle cx="12" cy="14" r="2.5"/></svg></div><h3>Property Care<small>For rentals, snowbirds and sellers.</small></h3></div>
+          <ul><li>House sitting</li><li>Property checks</li><li>Property management</li><li>Pre-listing punch lists</li></ul>
+          <a class="svc-link" href="#estimate" data-svc="Property care / house sitting">Quote this <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+      <article class="svc-f">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></div>
+        <span class="kicker">Bigger projects</span>
+        <h3>Remodels &amp; Upgrades</h3>
+        <p>When it's more than a fix. Same honest service, same attention to detail.</p>
+        <ul><li>Bathroom remodels</li><li>Kitchen updates</li><li>Decks &amp; patios</li><li>Porches</li><li>Basement finishing</li><li>Accessibility</li><li>Exterior painting</li><li>LVP flooring</li></ul>
+        <div class="offer"><strong>$3.50</strong><span>LVP flooring from $3.50 to $4.50 per sq ft, materials and install included. Ask about current pricing.</span></div>
+        <a class="btn btn-red" href="#estimate" data-svc="Remodel or bigger project">Quote my project</a>
+      </article>
+    </div>
+    <p class="svc-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>All work is done by appointment as a scheduled service call, Monday to Friday, 8 AM to 5 PM.</p>
+  </div>
+</section>
+
+<!-- SERVICE RECORD -->
+<section class="sec sec-dark" id="veteran" style="background:var(--navy-900)">
+  <div class="wrap record">
+    <figure class="record-photo" style="margin:0">
+      <span class="stamp">Veteran Owned</span>
+      <img src="img/christopher.webp" alt="Portrait of Christopher Coleman" width="820" height="820" loading="lazy">
+      <figcaption><b>Christopher Coleman</b>Owner · U.S. Army Veteran</figcaption>
+    </figure>
+    <div>
+      <span class="eyebrow">Service record</span>
+      <h2>The same standards. A different mission.</h2>
+      <p class="record-quote">"I started Handyman Hero because my neighbors deserved someone honest and reliable. Every home gets the care I'd give my own."</p>
+      <p class="record-body">Christopher built his skills on construction sites before, during and after his time in the U.S. Army. Today he brings that same discipline to every job in Payette County: show up on time, communicate clearly, finish the mission and leave the place better than he found it.</p>
+      <dl class="file">
+        <div class="file-row"><dt>Name</dt><dd>Christopher Coleman</dd></div>
+        <div class="file-row"><dt>Branch</dt><dd>United States Army</dd></div>
+        <div class="file-row"><dt>Experience</dt><dd>10+ years in construction and home repair</dd></div>
+        <div class="file-row"><dt>Home base</dt><dd>Fruitland, Payette County, Idaho</dd></div>
+        <div class="file-row"><dt>Current duty</dt><dd>Owner, Handyman Hero LLC · since Feb 2024</dd></div>
+      </dl>
+      <div class="standards">
+        <div class="standard"><b>Integrity</b><span>Honest advice, even when it's less work.</span></div>
+        <div class="standard"><b>Punctual</b><span>On time is late. Early is on time.</span></div>
+        <div class="standard"><b>Fair</b><span>Clear prices. No surprise fees.</span></div>
+        <div class="standard"><b>Respect</b><span>Your home, cared for like his own.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONEY-DO BUILDER -->
+<section class="sec sec-light" id="list">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Build your honey-do list</span>
+        <h2 style="margin-top:16px">Tap everything that's been bugging you.</h2>
+      </div>
+      <p>Pick what you need, add anything that's missing, and send the list. Christopher comes back with one clear quote for the lot.</p>
+    </div>
+    <div class="hd">
+      <div class="hd-panel">
+        <div class="hd-panel-head"><b>Tap to add</b><span>15 common jobs</span></div>
+        <div class="hd-tasks" id="tasks"></div>
+        <div class="hd-custom">
+          <label for="hd-other">Something else on your list?</label>
+          <small>If it's not here, add it. Anything around the house counts.</small>
+          <div class="hd-custom-row">
+            <input id="hd-other" maxlength="60" placeholder="e.g. Fix squeaky stairs, hang a mirror">
+            <button type="button" class="btn btn-navy" id="hd-add">+ Add to my list</button>
+          </div>
+        </div>
+      </div>
+      <aside class="hd-card" aria-live="polite">
+        <h3>Your list</h3>
+        <div class="hd-count"><span id="hdCount">0</span><small>jobs selected</small></div>
+        <div class="bundle"><div class="bundle-bar"><i></i><i></i><i></i></div><p id="bundleTxt">Pick 3 or more to bundle into one visit.</p></div>
+        <ul class="hd-list" id="hdList"><li class="hd-empty" style="list-style:none">Nothing yet. Tap a few jobs to start.</li></ul>
+        <a class="btn btn-red" href="#estimate" id="hdSend">Send my list for a quote</a>
+        <p class="hd-tip">Selling your home? Ask about a pre-listing punch list. One customer had a long list finished ahead of their sale deadline.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec sec-dark" id="reviews" style="background:var(--navy-700)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">What neighbors say</span>
+        <h2 style="margin-top:16px">Recommended across the valley.</h2>
+      </div>
+      <p>Real words from verified neighbors on Nextdoor in Payette, Fruitland and Caldwell.</p>
+    </div>
+    <div class="rev-grid">
+      <article class="rev lead">
+        <div class="stars" aria-label="Recommended"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg></div>
+        <blockquote>"Handyman Hero! He is in Fruitland and works closely with a great plumber. Hire a vet!"</blockquote>
+        <div class="rev-who"><span class="av">M</span><div><b>M.S.</b><span>Payette, ID · Nextdoor</span></div></div>
+      </article>
+      <article class="rev">
+        <div class="stars" aria-label="Recommended"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg></div>
+        <blockquote>"I used Handyman Hero and he was awesome. Even came back out the next day to help me with something that was user error and didn't charge me."</blockquote>
+        <div class="rev-who"><span class="av">A</span><div><b>A.C.</b><span>Caldwell, ID · Nextdoor</span></div></div>
+      </article>
+      <article class="rev">
+        <div class="stars" aria-label="Recommended"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z"/></svg></div>
+        <blockquote>Blew the leaves off the roof, unbolted the gutter guards and power sprayed the gutters clean, then power washed the whole house. "Very meticulous, very punctual, very honest."</blockquote>
+        <div class="rev-who"><span class="av">N</span><div><b>Verified neighbors</b><span>Summary of Nextdoor recommendations</span></div></div>
+      </article>
+    </div>
+    <p class="rev-src">Recommendations shown as posted on Nextdoor</p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="sec sec-light" id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Project gallery</span>
+        <h2 style="margin-top:16px">The work speaks for itself.</h2>
+      </div>
+      <p>Photos and short videos from real jobs around Payette County. Drag the slider to see a before and after.</p>
+    </div>
+    <div class="gal-tabs" role="group" aria-label="Filter projects">
+      <button type="button" aria-pressed="true" data-f="all">All work</button>
+      <button type="button" aria-pressed="false" data-f="photo">Photos</button>
+      <button type="button" aria-pressed="false" data-f="video">Videos</button>
+    </div>
+    <div class="gal" id="gal">
+      <div class="ba" data-k="photo">
+        <div class="ba-side ba-before"><span>Before</span></div>
+        <div class="ba-side ba-after" id="baAfter"><span>After</span></div>
+        <div class="ba-handle" id="baHandle"></div>
+        <div class="ba-title">Bathroom refresh</div>
+        <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Before and after comparison slider">
+      </div>
+      <div class="ph video tall" data-k="video"><div class="ph-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></div><span>Video · 0:45</span><b>Deck build time-lapse</b></div>
+      <div class="ph" data-k="photo"><div class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/></svg></div><span>Photo</span><b>TV mount &amp; wiring</b></div>
+      <div class="ph" data-k="photo"><div class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/></svg></div><span>Photo</span><b>Gutter clean-out</b></div>
+      <div class="ph wide" data-k="photo"><div class="ph-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.5"/></svg></div><span>Photo</span><b>LVP flooring install</b></div>
+      <div class="ph video" data-k="video"><div class="ph-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></div><span>Video · 0:30</span><b>House wash</b></div>
+      <div class="ph video" data-k="video"><div class="ph-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg></div><span>Video · 1:10</span><b>Meet Christopher</b></div>
+    </div>
+    <p class="gal-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>Placeholder tiles. Your real job photos and videos drop straight in here.</p>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec sec-dark" style="background:var(--navy-800)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">How it works</span>
+        <h2 style="margin-top:16px">Four steps. Zero runaround.</h2>
+      </div>
+      <p>From the first call to the final walkthrough, you always know what happens next.</p>
+    </div>
+    <ol class="steps2">
+      <li><div class="s-badge">01</div><h3>Call or send your list</h3><p>Phone, text or the form below. Small jobs welcome.</p><span class="s-time">Reply same business day</span></li>
+      <li><div class="s-badge">02</div><h3>Get a clear quote</h3><p>A straight price for labor and materials. No pressure.</p><span class="s-time">Before any work starts</span></li>
+      <li><div class="s-badge">03</div><h3>Work done right</h3><p>Booked at a time that suits you. On time, tidy, finished properly.</p><span class="s-time">Mon to Fri, 8 to 5</span></li>
+      <li><div class="s-badge">04</div><h3>Final walkthrough</h3><p>You check every item together. Not happy? He makes it right.</p><span class="s-time">Before he leaves</span></li>
+    </ol>
+    <div class="steps-cta">
+      <a class="btn btn-red" href="tel:+19867770757">Call (986) 777-0757</a>
+      <a class="btn btn-ghost" href="#estimate">Send my list</a>
+    </div>
+  </div>
+</section>
+
+<!-- AREA -->
+<section class="sec sec-light" id="area">
+  <div class="wrap area">
+    <div>
+      <span class="eyebrow">Service area</span>
+      <h2>Proudly serving the Snake River Region.</h2>
+      <p>Based in Fruitland and serving homes across Payette County and the Treasure Valley. Not sure if you're in range? Give Christopher a call.</p>
+      <div class="towns">
+        <span class="home">Fruitland</span><span>Payette</span><span>New Plymouth</span><span>Ontario, OR</span><span>Weiser</span><span>Caldwell</span><span>Treasure Valley</span>
+      </div>
+      <dl class="hours">
+        <dt>Mon to Fri</dt><dd>8:00 AM to 5:00 PM</dd>
+        <dt>Sat &amp; Sun</dt><dd>Closed</dd>
+      </dl>
+    </div>
+    <div class="map" aria-label="Stylized map of the Handyman Hero service area along the Snake River">
+      <svg viewBox="0 0 400 400" role="img" aria-hidden="true">
+        <defs>
+          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="rgba(255,255,255,.05)" stroke-width="1"/></pattern>
+          <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#B8202F" stop-opacity=".35"/><stop offset="1" stop-color="#B8202F" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="400" height="400" fill="#0F1D36"/>
+        <rect width="400" height="400" fill="url(#grid)"/>
+        <path d="M70 20 C 110 80, 120 120, 150 160 S 190 230, 175 280 S 210 350, 260 390" fill="none" stroke="#3E66B0" stroke-width="7" stroke-linecap="round" opacity=".75"/>
+        <text x="96" y="118" fill="#7E9BD0" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="2" transform="rotate(58 96 118)">SNAKE RIVER</text>
+        <circle cx="185" cy="190" r="120" fill="url(#glow)"/>
+        <circle cx="185" cy="190" r="120" fill="none" stroke="#C9A24A" stroke-width="1.5" stroke-dasharray="4 6" opacity=".7"/>
+        <g font-family="Public Sans, Arial, sans-serif" font-size="12" font-weight="700" fill="#F2F3EF">
+          <circle cx="185" cy="190" r="9" fill="#B8202F" stroke="#fff" stroke-width="2.5"/>
+          <text x="200" y="186">FRUITLAND</text>
+          <text x="200" y="200" font-size="9.5" font-weight="600" fill="#E3C77F" letter-spacing="1">HQ</text>
+          <circle cx="205" cy="128" r="5" fill="#F2F3EF"/><text x="216" y="132">Payette</text>
+          <circle cx="150" cy="210" r="5" fill="#F2F3EF"/><text x="62" y="214">Ontario, OR</text>
+          <circle cx="260" cy="165" r="5" fill="#F2F3EF"/><text x="270" y="169">New Plymouth</text>
+          <circle cx="170" cy="62" r="5" fill="#F2F3EF"/><text x="181" y="66">Weiser</text>
+          <circle cx="300" cy="300" r="5" fill="#F2F3EF"/><text x="250" y="322">Caldwell</text>
+        </g>
+        <text x="352" y="370" text-anchor="end" fill="#E3C77F" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="2">PAYETTE CO. · IDAHO</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-light2">
+  <div class="wrap faq-wrap">
+    <div class="faq-intro">
+      <span class="eyebrow">Questions</span>
+      <h2>Straight answers.</h2>
+      <p>Don't see your question? Call and ask Christopher directly. He picks up.</p>
+      <a class="btn btn-navy" href="tel:+19867770757">Call (986) 777-0757</a>
+    </div>
+    <div class="faq">
+      <details open><summary>Is my job too small?</summary><p>No. Small jobs are exactly why Handyman Hero started. A single fixture, a stuck door or a whole page of little fixes are all welcome. Bundle a few together and it all gets done in one visit.</p></details>
+      <details><summary>Are estimates really free?</summary><p>Yes. Send your list or describe the project and you'll get a clear price for labor and materials before any work begins. No pressure, no obligation.</p></details>
+      <details><summary>Do you take on bigger projects?</summary><p>Yes. Bathroom and kitchen updates, decks, porches, basement finishing, LVP flooring and exterior painting are all on the table. For anything that needs a licensed specialist, Christopher works with trusted local pros.</p></details>
+      <details><summary>How soon can you come out?</summary><p>Work is booked by appointment, Monday to Friday, 8 AM to 5 PM. Call or send the form and you'll hear back the same business day with the next available time.</p></details>
+      <details><summary>Can you look after my property while I'm away?</summary><p>Yes. House sitting, property monitoring and basic property management are available for snowbirds, landlords and anyone away for a while.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ESTIMATE -->
+<section class="sec sec-dark" id="estimate" style="background:linear-gradient(180deg,var(--navy-800),var(--navy-900))">
+  <div class="wrap est">
+    <div class="est-side">
+      <span class="eyebrow">Free estimate</span>
+      <h2>Report for duty? We will.</h2>
+      <p>Tell us what needs doing and Christopher will get back to you the same business day with a clear, honest quote.</p>
+      <div class="call-card">
+        <small>Prefer to talk? Call or text</small>
+        <a class="num" href="tel:+19867770757">(986) 777-0757</a>
+        <a class="mail" href="mailto:Christopher@handymanhero.info">Christopher@handymanhero.info</a>
+      </div>
+    </div>
+    <form class="form" id="form" novalidate>
+      <div class="form-head"><b>Request your estimate</b><span>Reply same business day</span></div>
+      <div><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required placeholder="Jane Smith"></div>
+      <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(208) 555-0123"></div>
+      <div><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@email.com"></div>
+      <div><label for="f-town">Town</label>
+        <select id="f-town" name="town"><option>Fruitland</option><option>Payette</option><option>New Plymouth</option><option>Ontario, OR</option><option>Weiser</option><option>Caldwell</option><option>Other Treasure Valley</option></select></div>
+      <div class="full"><label for="f-service">What do you need?</label>
+        <select id="f-service" name="service"><option>A list of small jobs</option><option>Repairs &amp; maintenance</option><option>Installs &amp; assembly</option><option>Safety &amp; smart home</option><option>Property care / house sitting</option><option>Remodel or bigger project</option><option>LVP flooring</option><option>Exterior painting</option></select></div>
+      <div class="full"><label for="f-msg">Tell us about the job</label><textarea id="f-msg" name="msg" placeholder="e.g. Mount a 65 inch TV, swap two ceiling fans, fix a leaky bathroom faucet"></textarea></div>
+      <div class="full"><button class="btn btn-red" type="submit">Get my free estimate</button></div>
+      <p class="form-fine full">No spam, no pressure. Your details only go to Christopher.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div class="ftr-brand">
+        <img src="img/badge.webp" alt="Handyman Hero badge logo" width="110" height="110" loading="lazy">
+        <p>Veteran-owned handyman and home services in Payette County, Idaho. Dependable craftsmanship, integrity and care in every home.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="#services">Repairs &amp; maintenance</a></li><li><a href="#services">Installs &amp; assembly</a></li><li><a href="#services">Safety &amp; smart home</a></li><li><a href="#services">Property care</a></li><li><a href="#services">Remodels</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li><a href="tel:+19867770757">(986) 777-0757</a></li><li><a href="mailto:Christopher@handymanhero.info">Christopher@handymanhero.info</a></li><li>Fruitland, Idaho</li></ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul><li>Mon to Fri: 8 AM to 5 PM</li><li>Sat &amp; Sun: Closed</li><li>By appointment</li></ul>
+      </div>
+    </div>
+    <div class="ftr-base">
+      <span>© 2026 Mago Labs. Concept design prepared for Handyman Hero. All rights reserved. Not licensed for use or reproduction.</span>
+      <span>Website by <a href="https://magolabs.in" target="_blank" rel="noopener">Mago Labs</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-red" href="tel:+19867770757"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>Call now</a>
+  <a class="btn btn-navy" href="#estimate">Free estimate</a>
+</div>
+
+<script>
+(function(){
+  // mobile nav
+  var nav=document.getElementById('nav'),mb=document.getElementById('menuBtn');
+  mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
+
+  // honey-do list
+  var jobs=['Leaky faucet','TV mounting','Ceiling fan install','Gutter cleaning','Power wash house','Caulk tub & windows','Weather stripping','Dryer vent cleaning','Furniture assembly','Baby proofing','Smart home setup','Garage organization','Drywall patch','LVP flooring','Deck or porch repair'];
+  var wrap=document.getElementById('tasks'),list=document.getElementById('hdList'),count=document.getElementById('hdCount');
+  var check='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>';
+  jobs.forEach(function(j,i){
+    var d=document.createElement('div');d.className='task';
+    d.innerHTML='<input type="checkbox" id="job'+i+'" value="'+j+'"><label for="job'+i+'"><span class="box">'+check+'</span>'+j+'</label>';
+    wrap.appendChild(d);
+  });
+  ['job1','job4','job6'].forEach(function(id){document.getElementById(id).checked=true});
+  function sel(){return Array.prototype.map.call(wrap.querySelectorAll('input:checked'),function(i){return i.value})}
+  function render(){
+    var s=sel();count.textContent=s.length;
+    var bars=document.querySelectorAll('.bundle-bar i');bars.forEach(function(b,i){b.classList.toggle('on',i<s.length)});
+    document.getElementById('bundleTxt').innerHTML=s.length>=3?'<b>Bundled.</b> One visit, one quote for everything.':'Pick '+(3-s.length)+' more to bundle into one visit.';
+    list.innerHTML=s.length?s.map(function(x){return '<li>'+x+'</li>'}).join(''):'<li class="hd-empty" style="list-style:none">Nothing yet. Tap a few jobs to start.</li>';
+  }
+  wrap.addEventListener('change',render);render();
+  // custom jobs
+  var other=document.getElementById('hd-other'),nCustom=0;
+  function addCustom(){
+    var v=other.value.trim().replace(/[<>&"]/g,'');if(!v)return;
+    var id='custom'+(nCustom++),d=document.createElement('div');d.className='task custom';
+    d.innerHTML='<input type="checkbox" id="'+id+'" value="'+v+'" checked><label for="'+id+'"><span class="box">'+check+'</span>'+v+'<em>Added</em></label>';
+    wrap.appendChild(d);other.value='';render();other.focus();
+  }
+  document.getElementById('hd-add').addEventListener('click',addCustom);
+  other.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();addCustom()}});
+  document.getElementById('hdSend').addEventListener('click',function(){
+    var s=sel();if(!s.length)return;
+    document.getElementById('f-service').value='A list of small jobs';
+    document.getElementById('f-msg').value='My honey-do list:\n'+s.map(function(x){return '• '+x}).join('\n');
+  });
+
+  // before/after
+  var r=document.getElementById('baRange'),a=document.getElementById('baAfter'),h=document.getElementById('baHandle');
+  function ba(){a.style.clipPath='inset(0 0 0 '+r.value+'%)';h.style.left=r.value+'%'}
+  r.addEventListener('input',ba);ba();
+
+  // gallery filter
+  var tabs=document.querySelectorAll('.gal-tabs button'),items=document.querySelectorAll('#gal>[data-k]');
+  tabs.forEach(function(t){t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-pressed',x===t)});
+    var f=t.dataset.f;items.forEach(function(it){it.hidden=!(f==='all'||it.dataset.k===f)});
+  })});
+
+  // form
+  var form=document.getElementById('form');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('f-name'),p=document.getElementById('f-phone'),ok=true;
+    [n,p].forEach(function(el){if(!el.value.trim()){el.style.borderColor='#B8202F';ok=false}else{el.style.borderColor=''}});
+    if(!ok){(n.value.trim()?p:n).focus();return}
+    var first=n.value.trim().split(' ')[0];
+    form.innerHTML='<div class="form-ok"><div class="seal-ok">'+check+'</div><b>Request received, '+first.replace(/[<>&"]/g,'')+'</b><p>This is a demo, so nothing was sent. On the live site, Christopher gets your request instantly and replies the same business day.</p></div>';
+  });
+
+  // service quick-quote links
+  document.querySelectorAll('[data-svc]').forEach(function(a){a.addEventListener('click',function(){var sel=document.getElementById('f-service');var v=a.getAttribute('data-svc').replace('&amp;','&');for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===v){sel.selectedIndex=i}}})});
+})();
+
+/* (c) 2026 Mago Labs. Concept design prepared for Handyman Hero. Unauthorized copying, hosting or reuse is prohibited. */
+(function(){
+  var h=location.hostname||'';
+  var ok=!h||/(^|\.)vercel\.app$|magolabs\.in$|claude|anthropic|localhost|127\.0\.0\.1/.test(h);
+  function lock(){document.documentElement.innerHTML='<body style="margin:0;min-height:100vh;display:grid;place-items:center;background:#0A1426;color:#F2F3EF;font-family:Arial,sans-serif;text-align:center;padding:24px"><div><h1 style="font-size:28px;margin:0 0 12px">This design belongs to Mago Labs</h1><p style="opacity:.75;margin:0 0 18px">It is a concept and is not licensed for use on this domain.</p><a href="https://magolabs.in" style="color:#E3C77F">magolabs.in</a></div></body>'}
+  if(!ok){lock();return}
+  document.addEventListener('contextmenu',function(e){if(!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))e.preventDefault()});
+  document.addEventListener('dragstart',function(e){e.preventDefault()});
+  document.addEventListener('keydown',function(e){
+    var k=(e.key||'').toLowerCase(),m=e.ctrlKey||e.metaKey;
+    if(e.key==='F12'||(m&&e.shiftKey&&/[icj]/.test(k))||(m&&/[sup]/.test(k))){e.preventDefault();e.stopPropagation()}
+  },true);
+  document.addEventListener('copy',function(e){
+    var t=e.target;if(t&&/INPUT|TEXTAREA/.test(t.tagName))return;
+    if(e.clipboardData){e.clipboardData.setData('text/plain','Design (c) Mago Labs. magolabs.in');e.preventDefault()}
+  });
+  // keep the demo banner, credit and copyright in place
+  var banner=document.querySelector('.demo').outerHTML,base=document.querySelector('.ftr-base').innerHTML;
+  setInterval(function(){
+    var d=document.querySelector('.demo');
+    if(!d||getComputedStyle(d).display==='none'||getComputedStyle(d).visibility==='hidden'){if(d)d.remove();document.body.insertAdjacentHTML('afterbegin',banner)}
+    var f=document.querySelector('.ftr-base');if(f&&f.innerHTML.indexOf('Mago Labs')<0)f.innerHTML=base;
+  },1500);
+  try{console.log('%cDesign (c) 2026 Mago Labs. Concept for Handyman Hero. Not licensed for reuse. magolabs.in','font:700 14px Arial;color:#B8202F')}catch(e){}
+})();
+</script>
+</body>
+</html>
